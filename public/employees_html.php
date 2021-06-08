@@ -7,6 +7,7 @@
     <table border="1">
         <thead>
             <tr>
+                <th>Id.</th>
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Localidad</th>
@@ -15,6 +16,7 @@
         <tbody>
             <?php foreach($people as $person): ?>
                 <tr>
+                    <td><?= $person['id'] ?></td>
                     <td><?= $person['name'] ?></td>
                     <td><?= $person['email'] ?></td>
                     <td><?= $person['city'] ?></td>
