@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>PHP Exercice</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
+<?php require 'partial/head.php'; ?>
 
 <body>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/partial/header.php'; ?>
@@ -30,6 +25,7 @@
     </pre -->
     <h1>Hola, <?= $_GET['name']; ?></h1>
     <p>Hoy es <strong><?= $weeekDays[date('N')]; ?></strong>. ¿Qué tal estás?</p>
+    <?php require 'partial/footer.php'; ?>
 </body>
 
 </html>
