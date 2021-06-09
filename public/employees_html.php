@@ -18,7 +18,7 @@
                 <tr>
                     <td><?= $person['id'] ?></td>
                     <td><?= $person['name'] ?></td>
-                    <td><?= $person['email'] ?></td>
+                    <td><a href="/employees.php?id=<?= $person['id'] ?>"><?= $person['email'] ?></a></td>
                     <td><?= $person['city'] ?></td>
                 </tr>
             <?php endforeach; ?>
