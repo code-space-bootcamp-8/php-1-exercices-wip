@@ -24,6 +24,32 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+
+    <?php if(isset($_GET['message'])) :?>
+        <p><?= $_GET['message']; ?></p>
+    <?php endif; ?>
+
+    <hr/>
+    <form method="POST" action="/employees_add.php" enctype="multipart/form-data">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required/>
+        <br/>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required/>
+        <br/>
+        <label for="age">Edad</label>
+        <input type="number" id="age" name="age" required/>
+        <br/>
+        <label for="city">Ciudad</label>
+        <input type="text" id="city" name="city" />
+        <br/>
+        <label for="archivo">Archivo</label>
+        <input type="file" id="archivo" name="archivo" />
+        <hr/>
+        <input type="submit" value="Enviar"/>
+    </form>
+
+
     <?php require 'partial/footer.php'; ?>
 </body>
 
