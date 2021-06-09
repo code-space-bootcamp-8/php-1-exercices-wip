@@ -1,7 +1,12 @@
 <?php
     require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
 
-    $query = (isset($_GET['id'])) ? 'SELECT * FROM employees WHERE id='.$_GET['id'] : 'SELECT * FROM employees';
+    $query = 'SELECT * FROM employees';
+    if (isset($_GET['id'])) {
+        $query = 'SELECT * FROM employees WHERE id ='.$_GET['id'];
+    } elseif (isset($_GET['email'])) {
+        $query = 'SELECT * FROM employees WHERE email = "'.$_GET['email'].'"';
+    }
     $stm = $dbConnexion->query($query);
     $people = $stm->fetchAll(PDO::FETCH_ASSOC);
 ?>

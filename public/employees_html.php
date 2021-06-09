@@ -16,9 +16,9 @@
         <tbody>
             <?php foreach($people as $person): ?>
                 <tr>
-                    <td><?= $person['id'] ?></td>
+                    <td><a href="/employees.php?id=<?= $person['id'] ?>"><?= $person['id'] ?></a></td>
                     <td><?= $person['name'] ?></td>
-                    <td><a href="/employees.php?id=<?= $person['id'] ?>"><?= $person['email'] ?></a></td>
+                    <td><a href="/employees.php?email=<?= $person['email'] ?>"><?= $person['email'] ?></a></td>
                     <td><?= $person['city'] ?></td>
                 </tr>
             <?php endforeach; ?>
