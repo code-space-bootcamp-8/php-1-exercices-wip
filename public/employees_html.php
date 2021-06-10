@@ -21,6 +21,7 @@
             </tr>
         </thead>
         <tbody>
+        <?php // Se recorre y pinta la lista preparada en employees.php ?>
             <?php foreach($people as $person): ?>
                 <tr>
                     <td><a href="/employees.php?id=<?= $person['id'] ?>"><?= $person['id'] ?></a></td>
@@ -52,7 +53,11 @@
     }
     ?>
 
-    <form method="POST" action="/employees_add.php" enctype="multipart/form-data">
+    <?php
+        $action = isset($currentPerson) ? '/employees_edit.php' : '/employees_add.php';
+    ?>
+    
+    <form method="POST" action="<?= $action; ?>" enctype="multipart/form-data">
         <?php if(isset($currentPerson)): ?>
             <input type="hidden" id="id" name="id" value="<?= $currentPerson['id']; ?>"/>
         <?php endif; ?>
