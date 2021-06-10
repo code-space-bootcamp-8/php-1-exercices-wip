@@ -4,6 +4,12 @@
 
 <body>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/partial/header.php'; ?>
+
+    <?php if(isset($_GET['message'])) :?>
+        <p><?= $_GET['message']; ?></p>
+    <?php endif; ?>
+
+    <hr/>
     <table border="1">
         <thead>
             <tr>
@@ -27,11 +33,8 @@
         </tbody>
     </table>
 
-    <?php if(isset($_GET['message'])) :?>
-        <p><?= $_GET['message']; ?></p>
-    <?php endif; ?>
-
     <hr/>
+
     <form method="POST" action="/employees_add.php" enctype="multipart/form-data">
         <label for="name">Nombre</label>
         <input type="text" id="name" name="name" required/>
@@ -50,7 +53,6 @@
         <hr/>
         <input type="submit" value="Enviar"/>
     </form>
-
 
     <?php require 'partial/footer.php'; ?>
 </body>
