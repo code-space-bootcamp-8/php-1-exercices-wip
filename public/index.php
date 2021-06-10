@@ -1,9 +1,13 @@
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php require 'partial/head.php'; ?>
 
 <body>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/partial/header.php'; ?>
+    <?php if($_SESSION['last_visit_time']):?>
+        <h4><?= $_SESSION['last_visit_time']; ?></h4>
+    <?php endif; ?>
     <?php
     $weeekDays = [
         1 => 'lunes',
