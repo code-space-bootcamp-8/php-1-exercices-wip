@@ -1,6 +1,7 @@
 <?php
     require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
 
+    // Esta query es para el listado.
     $query = 'SELECT * FROM employees';
     if (isset($_GET['id'])) {
         $query = 'SELECT * FROM employees WHERE id = :identifiador';
