@@ -11,6 +11,7 @@
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Localidad</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
                     <td><?= $person['name'] ?></td>
                     <td><a href="/employees.php?email=<?= $person['email'] ?>"><?= $person['email'] ?></a></td>
                     <td><?= $person['city'] ?></td>
+                    <td><button class="employees-delete-button" value="Eliminar" data-person='<?= json_encode($person); ?>'>Eliminar</button></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
