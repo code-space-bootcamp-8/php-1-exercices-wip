@@ -8,6 +8,7 @@
     <?php if($_SESSION['last_visit_time']):?>
         <h4><?= $_SESSION['last_visit_time']; ?></h4>
     <?php endif; ?>
+    <pre>$_COOKIE: <?php print_r($_COOKIE); ?></pre>
     <?php
     $weeekDays = [
         1 => 'lunes',
